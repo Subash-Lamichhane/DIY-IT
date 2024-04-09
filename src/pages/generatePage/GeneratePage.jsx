@@ -15,12 +15,11 @@ const GeneratePage = () => {
     const flags = useFlags(['maintenance']); // only causes re-render if specified flag values / traits change
 
     const maintain = flags.maintenance.enabled;
-    console.log(maintain)
-
     const generateAnswer = async () => {
+
         setLoading(true)
         const response = await axios({
-            url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyAEpnjFWlZsI5bjPgNqA6HO8amJ-wjx49A",
+            url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key="+import.meta.env.VITE_GEMINI_KEY,
             method: "post",
             data: {
                 "contents": [
@@ -72,10 +71,11 @@ const GeneratePage = () => {
                                         <div className='h-32 '></div>
                                         <h1 className='text-2xl text-center text-gray-500'>Try new DIY and Crafts.</h1>
                                     </>}
-                                {answer.length == 0 && loading != false &&
+                                {loading == true ?
                                     <>                            <div className='flex justify-center items-center h-full'>
-                                        <div className="animate-spin rounded-full h-12 wx-12 wt-8 border-t-4 border-b-4 border-black"></div>
-                                    </div></>}
+                                        <div className="animate-spin rounded-full h-12 wx-12 wt-8 border-t-4 border-b-4 border-black text-black"></div>
+                                    </div></>
+                                    :<></>}
 
                             </div>
                         </div>

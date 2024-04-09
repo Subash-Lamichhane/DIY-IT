@@ -25,7 +25,6 @@ const HomePage = () => {
         setCraftTitle(title)
         setcraftSteps(steps)
         setShowSteps(true)
-        console.log("Hewiorksjdlfksdfljk")
     }
 
     const cardsData = [
@@ -177,7 +176,10 @@ const HomePage = () => {
                             :
                             <>
                                 <div className='min-h-[60vh] flex items-center flex-col'>
+                                    <div>
+                                    {/* <div className='text-xl mx-24 text-gray-600 hover:cursor-pointer' ><span onClick={setShowSteps(false)}> {"<"} Go back</span></div> */}
 
+                                    </div>
                                     <div className='text-3xl w-full text-center m-8 font-bold '>{craftTitle}</div>
                                     <StepsCard recipeData={craftsteps} />
                                 </div>

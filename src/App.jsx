@@ -11,12 +11,13 @@ function App() {
     // console.log(maintainFlags)
     // console.log(maintainFlags.enabled)
     // const maintain = flags.maintenance.enabled;
+
   return (
     <>
 
       <FlagsmithProvider
         options={{
-          environmentID: 'mSx3R7KYMA5E9T6on8p4jv',
+          environmentID: import.meta.env.VITE_FLAGSMITH_KEY,
         }}
         flagsmith={flagsmith}>
         {/* {
