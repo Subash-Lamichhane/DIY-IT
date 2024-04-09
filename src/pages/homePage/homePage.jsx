@@ -66,7 +66,7 @@ const HomePage = () => {
             ]
         },
         {
-            title: "Recucle Pit Bottle",
+            title: "Pit Bottle",
             imageSrc: "https://modpodgerocksblog.b-cdn.net/wp-content/uploads/2017/01/Recycle-pill-containers-into-organizers-e1699479407403-942x1200.jpg.webp",
             description: "If you have a giant purse, I have a solution to losing things in the black hole – recycle pill bottles into organizers! So easy to make.",
             isNew: true,
@@ -173,8 +173,11 @@ const HomePage = () => {
                 </>
                 :
                 <>
-                <div className='text-3xl w-full text-center m-8'>{craftTitle}</div>
+                <div className='min-h-[60vh] flex items-center flex-col'>
+                    
+                <div className='text-3xl w-full text-center m-8 font-bold '>{craftTitle}</div>
                     <StepsCard recipeData={craftsteps}/>
+                </div>
                 </>
             }
             <Footer/>
