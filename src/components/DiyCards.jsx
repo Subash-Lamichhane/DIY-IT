@@ -2,7 +2,7 @@ import React from 'react';
 
 const DiyCards = ({ title, imageSrc, description, isNew, categories }) => {
   return (
-    <div className="max-w-sm w-full bg-white shadow-xl rounded-lg overflow-hidden">
+    <div className="max-w-sm w-full bg-white shadow-xl rounded-lg overflow-hidden hover:cursor-pointer hover:border-4 hover:border-blue-500">
       <div className="relative">
         <img className="object-cover w-full h-56" src={imageSrc} alt={title} />
         {isNew && (

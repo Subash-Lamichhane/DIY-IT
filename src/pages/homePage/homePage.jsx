@@ -152,11 +152,11 @@ const HomePage = () => {
             {showSteps == false ?
                 <>
                     {desig && <Carousel1 />}
-                    {!desig && <Carousel2 />}
+                    {!desig && <Carousel2 />} 
 
                     <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 m-10 md:mx-32 md:my-20' >
                         {cardsData.map((card, index) => (
-                            <div key={index} onClick={() => {handleSelect(card.title, card.steps) }}>
+                            <div key={index} onClick={() => {handleSelect(card.title, card.steps)}}>
                             <DiyCards
                                 key={index}
                                 title={card.title}

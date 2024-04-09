@@ -5,6 +5,7 @@ import HomePage from "./pages/homePage/homePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GeneratePage from "./pages/generatePage/GeneratePage";
 import AboutPage from "./pages/aboutPage.jsx/AboutPage";
+import Maintainance from "./pages/Maintainance";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="/generate" element={<GeneratePage />} />
             <Route exact path="/about" element={<AboutPage />} />
+            <Route exact path="/maintainance" element={<Maintainance/>} />
           </Routes>
         </Router>
 
