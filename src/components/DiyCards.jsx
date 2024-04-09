@@ -1,8 +1,9 @@
 import React from 'react';
 
-const DiyCards = ({ title, imageSrc, description, isNew, categories }) => {
+const DiyCards = ({ title, imageSrc, description, isNew, categories,darkMode }) => {
   return (
-    <div className="max-w-sm w-full bg-white shadow-xl rounded-lg overflow-hidden hover:cursor-pointer hover:border-4 hover:border-blue-500">
+    <div className={darkMode?"max-w-sm w-full bg-gray-800 text-white shadow-xl rounded-lg overflow-hidden hover:cursor-pointer hover:border-4 hover:border-blue-500"
+    :"max-w-sm w-full bg-white shadow-xl rounded-lg overflow-hidden hover:cursor-pointer hover:border-4 hover:border-blue-500"}>
       <div className="relative">
         <img className="object-cover w-full h-56" src={imageSrc} alt={title} />
         {isNew && (
@@ -12,8 +13,8 @@ const DiyCards = ({ title, imageSrc, description, isNew, categories }) => {
         )}
       </div>
       <div className="p-4">
-        <h2 className="font-semibold text-xl text-gray-800">{title}</h2>
-        <p className="text-gray-600 mt-2">{description}</p>
+        <h2 className={darkMode?"font-semibold text-xl text-gray-200":"font-semibold text-xl text-gray-800"}>{title}</h2>
+        <p className={darkMode?"text-gray-400 mt-2":"text-gray-600 mt-2"}>{description}</p>
         <div className="flex flex-wrap mt-4">
           {categories.map((category, index) => (
             <div

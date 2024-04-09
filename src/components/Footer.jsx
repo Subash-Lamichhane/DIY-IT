@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-const Footer = () => {
+const Footer = ({darkMode=false}) => {
   return (
-    <div className="flex flex-col gap-10 justify-between items-center bg-gray-100 text-gray-700 py-6 pt-10 text-sm">
+    <div className={darkMode?"flex flex-col gap-10 justify-between items-center bg-gray-900 text-gray-300 py-6 pt-10 text-sm"
+    :"flex flex-col gap-10 justify-between items-center bg-gray-100 text-gray-700 py-6 pt-10 text-sm"}>
       <div className=" mx-auto flex  justify-evenly items-center w-full ">
         <div className="flex flex-col gap-1 justify-center items-start">
           <Link to="/">

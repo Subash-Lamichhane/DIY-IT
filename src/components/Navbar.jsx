@@ -4,10 +4,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import { Link } from 'react-router-dom';
 
-// import { Button } from './Button';
-// import './Navbar.css';
 
-export const Navbar = () => {
+export const Navbar = ({darkMode=true}) => {
     const [click, setClick] = useState(false)
     const [button, setButton] = useState(true)
 
@@ -32,7 +30,7 @@ export const Navbar = () => {
 
     return (
         <>
-            <header className="min-h-24 flex justify-center bg-white">
+            <header className="min-h-24 flex justify-center ">
                 <nav className="flex justify-between items-center w-[92%]  mx-auto pt-4">
                     <div className='text-3xl font-bold ml-4 md:ml-10'>
                             <Link to="/">DIY-IT</Link>
@@ -43,19 +41,19 @@ export const Navbar = () => {
 
                         <ul className="flex md:flex-row flex-col items-center md:gap-[4vw] gap-5 w-full text-xl font-bold p-5  ">
                             <li className={!button ? 'hover:bg-gray-200 w-full text-center hover:text-black h-10 rounded-xl flex align-center justify-center md:hover:text-gray-800 pt-1' :
-                                'hover:text-gray-800 w-full text-center flex align-center justify-center md:hover:text-gray-600 hover:border-b-2 border-black rounded-xl px-[1.25rem]'}>
+                                `hover:text-gray-800 w-full text-center flex align-center justify-center ${darkMode?"md:hover:text-gray-200 border-white ":"md:hover:text-gray-600 border-black "} hover:border-b-2 rounded-xl px-[1.25rem]`}>
                                 <Link to="/">
                                 Explore
                                 </Link>
                             </li>
                             <li className={!button ? 'hover:bg-gray-200 w-full text-center hover:text-black h-10 rounded-xl flex align-center justify-center md:hover:text-gray-800 pt-1' :
-                                'hover:text-gray-800 w-full text-center flex align-center justify-center md:hover:text-gray-600 hover:border-b-2 border-black rounded-xl px-[1.25rem]'}>
+                                `hover:text-gray-800 w-full text-center flex align-center justify-center ${darkMode?"md:hover:text-gray-200 border-white ":"md:hover:text-gray-600 border-black "} hover:border-b-2 rounded-xl px-[1.25rem]`}>
                                 <Link to="/generate">
                                 Generate
                                 </Link>
                             </li>
                             <li className={!button ? 'hover:bg-gray-200 w-full text-center hover:text-black h-10 rounded-xl flex align-center justify-center md:hover:text-gray-800 pt-1' :
-                                'hover:text-gray-800 w-full text-center flex align-center justify-center md:hover:text-gray-600 hover:border-b-2 border-black rounded-xl px-[1.25rem]'}>
+                                `hover:text-gray-800 w-full text-center flex align-center justify-center ${darkMode?"md:hover:text-gray-200 border-white ":"md:hover:text-gray-600 border-black "} hover:border-b-2 rounded-xl px-[1.25rem]`}>
                                 <Link to="/about">
                                 About
                                 </Link>

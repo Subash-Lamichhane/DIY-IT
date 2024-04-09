@@ -13,10 +13,11 @@ import Maintainance from '../Maintainance';
 
 const HomePage = () => {
 
-    const flags = useFlags(['maintenance']); // only causes re-render if specified flag values / traits change
+    const flags = useFlags(['maintenance','dark_mode']); // only causes re-render if specified flag values / traits change
 
     const maintain = flags.maintenance.enabled;
-    console.log(maintain)
+    
+    const dark = flags.dark_mode.enabled;
 
     const [showSteps, setShowSteps] = useState(false)
     const [craftTitle, setCraftTitle] = useState("")
@@ -150,9 +151,8 @@ const HomePage = () => {
         <>
             {maintain == true ? <Maintainance /> :
                 <>
-                    <>
-                        <Navbar />
-                        <hr />
+                    <div className={`${dark?"bg-black text-white":""}`}>
+                        <Navbar darkMode={dark}/>
                         {showSteps == false ?
                             <>
                                 {desig && <Carousel1 />}
@@ -168,6 +168,7 @@ const HomePage = () => {
                                                 description={card.description}
                                                 isNew={card.isNew}
                                                 categories={card.categories}
+                                                darkMode = {dark}
                                             />
                                         </div>
                                     ))}
@@ -185,8 +186,8 @@ const HomePage = () => {
                                 </div>
                             </>
                         }
-                        <Footer />
-                    </>
+                        <Footer darkMode={dark}/>
+                    </div>
                 </>
             }
         </>
