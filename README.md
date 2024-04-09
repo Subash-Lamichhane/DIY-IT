@@ -1,15 +1,13 @@
-<h3 align="center">DIY-IT</h3>
+<h1 align="center">DIY-IT</h1>
 <p align="center">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> 
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white">
-
-
 </p>
 
 
 ## Description
-DIY-IT is your one of the destinations for exploring the world of do-it-yourself (DIY) crafts. Discover a diverse range of projects with step-by-step instructions, materials lists, and helpful tips. Crafting isn't just about the end result – it's about the joy of creating. Whether you're crafting solo or with friends, DIY-IT provides a platform for relaxation, creativity, and fun. Our innovative generative AI feature lets you generate custom crafting steps for your unique ideas, opening up endless possibilities for innovation. Join us and unleash your creativity with DIY-IT!
+DIY-IT is your one of the destinations for exploring the world of do-it-yourself (DIY) crafts. Discover a diverse range of projects with step-by-step instructions, materials lists, and helpful tips. Crafting isn't just about the end result – it's about the joy of creating. Whether you're crafting solo or with friends, DIY-IT provides a platform for relaxation, creativity, and fun. Our generative AI feature using gemini lets you generate custom crafting steps for your unique ideas, opening up endless possibilities for innovation. Join us and unleash your creativity with DIY-IT!
 
 DIY-IT is designed to provide users with step-by-step guides for creating various crafts using household items. Whether you're a beginner looking to explore the world of crafting or an experienced crafter seeking new projects, our platform offers a diverse range of DIY ideas to suit your interests and skill level.
 
@@ -17,7 +15,8 @@ In addition to curated DIY projects, this platform features an AI-powered custom
 
 Whether you're looking to spruce up your living space, create unique gifts for loved ones, or simply unwind with a creative activity, our web app is here to inspire and empower you on your crafting journey. Use DIY-IT today and unleash your creativity with DIY Crafts!
 
-<video src="https://github.com/Subash-Lamichhane/DIY-IT/assets/109226874/db2c7177-14be-4e72-9406-f58015e69a6e"></video>
+Escape the screen and rediscover the world with DIY-IT. Dive into real-world adventures and embrace the joy of exploration and creativity. It's time to have fun beyond the digital realm!
+<video src="https://github.com/Subash-Lamichhane/DIY-IT/assets/109226874/648d819f-9e3b-4089-87f8-1d48677ad95a"></video>
 
 
 
@@ -27,13 +26,14 @@ Whether you're looking to spruce up your living space, create unique gifts for l
 - [Technologies](#technologies)
 - [Installation Guide](#installation-guide)
 - [Configuration](#configuration)
-
+- [License](#license)
 
 ## Features
  - Craft Library: Access a wide range of DIY projects across various categories.
  - Step-by-Step Instructions: Clear and easy-to-follow instructions accompany each project.
  - Generative AI Feature: Generate custom crafting steps for your unique project ideas.
  - Regular Updates: Stay inspired with frequent additions to the craft library.
+ - Dark and Light mode: Integrated dark and light mode using flagsmith.
 
 
 ## Technologies
@@ -43,8 +43,8 @@ This project is built using the following technologies:
 - React: Frontend library for building user interfaces.
 - Vite: Frontend build tool for faster development.
 - Tailwind CSS: Utility-first CSS framework for styling.
-- Express: Backend framework for handling server-side logic.
 - Gemini: Language model used for generating steps to described crafts.
+- Flagsmith: Flagsmith provides an all-in-one feature flag tool for developing, implementing, and managing your feature flags.
 <!-- 
 ## Key Features
 
@@ -88,4 +88,6 @@ VITE_FLAGSMITH_KEY = 'mSx3R7KYMA5E9T6on8p4jv'
 ```
 
 
+## License
 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
