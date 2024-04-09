@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer';
 
 const AboutPage = () => {
     return (
-        <div className="bg-gray-100 min-h-screen">
+        <div className="bg-gray-200 min-h-screen">
             <Navbar />
             <div className="container mx-auto px-4 py-8 grid">
-                <h1 className="text-3xl font-semibold text-center mb-6">About the Web App</h1>
+                <h1 className="text-3xl font-semibold text-center mb-6">About DIY-IT</h1>
                 <div className='grid grid-cols-5 gap-10'>
                     <div className='col-span-3 flex items-center flex-col py-14'>
                         <p className="text-lg text-gray-800 mb-8">
@@ -19,12 +20,13 @@ const AboutPage = () => {
                             Whether you're looking to spruce up your living space, create unique gifts for loved ones, or simply unwind with a creative activity, our web app is here to inspire and empower you on your crafting journey. Use DIY-IT today and unleash your creativity with DIY Crafts!
                         </p>
                     </div>
-                    <div className='col-span-2'>
-                        <img src="https://images.unsplash.com/photo-1608613304899-ea8098577e38?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className='w-[80%] h-54 cover'/>
+                    <div className='col-span-2 h-[38rem] relative'>
+                        <img src="https://images.unsplash.com/photo-1608613304899-ea8098577e38?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className='absolute inset-0 w-full h-full object-cover' alt="DIY Crafts"/>
                     </div>
                 </div>
 
             </div>
+            <Footer/>
         </div>
     );
 }

@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Navbar from '../../components/Navbar';
 import StepsCard from '../../components/StepsCard';
+import Footer from '../../components/Footer';
 
 const GeneratePage = () => {
     const [productDetail, setProductDetail] = useState('');
@@ -34,19 +35,20 @@ const GeneratePage = () => {
     return (
         <>
             <Navbar />
-            <div>
+            <hr />
+            <div className=''>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 mx-32 my-10'>
                     <div>
                         <div className=''>
                             <h2 className='text-2xl'>Describe DIY product you want to make:</h2>
-                            <textarea className=' w-[90%] h-24 border-2 border-black text-lg p-2' value={productDetail} onChange={(e) => { setProductDetail(e.target.value) }}></textarea>
+                            <textarea className=' w-[90%] h-72 border-2 border-black text-lg p-2' value={productDetail} onChange={(e) => { setProductDetail(e.target.value) }}></textarea>
                         </div>
                         <div>
                             <h2 className='text-2xl'>Describe items that are available to you:</h2>
                             <textarea className=' w-[90%] h-24 border-2 border-black text-lg p-2' value={itemsAvailable} onChange={(e) => { setItemsAvailable(e.target.value) }}></textarea>
                             <div className="w-full flex justify-center">
-                                <button onClick={generateAnswer} className='bg-blue-500 text-white border-[0.2rem] border-blue-500 w-[20rem] h-12 rounded-full text-2xl my-10 hover:text-blue-500 hover:bg-white'>Generate Steps</button>
+                                <button onClick={generateAnswer} className='bg-blue-500 text-white border-[0.2rem] border-blue-500 w-[20rem] h-12 rounded-md text-2xl my-10 hover:text-blue-500 hover:bg-white'>Generate Steps</button>
                             </div>
                         </div>
                     </div>
@@ -65,6 +67,7 @@ const GeneratePage = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }

@@ -32,7 +32,7 @@ export const Navbar = () => {
 
     return (
         <>
-            <header className="min-h-24 flex justify-center ">
+            <header className="min-h-24 flex justify-center bg-white">
                 <nav className="flex justify-between items-center w-[92%]  mx-auto pt-4">
                     <div className='text-3xl font-bold ml-4 md:ml-10'>
                             <Link to="/">DIY-IT</Link>
