@@ -9,18 +9,18 @@ import { Link } from 'react-router-dom';
 import Navbar from "../../components/Navbar";
 import StepsCard from '../../components/StepsCard';
 import Footer from '../../components/Footer';
+import Maintainance from '../Maintainance';
 
 const HomePage = () => {
 
-    // const flags = useFlags(['button_feature','design_1']); // only causes re-render if specified flag values / traits change
+    const flags = useFlags(['maintenance']); // only causes re-render if specified flag values / traits change
 
-    // const button_size =  flags.button_feature.value;
-    // const design_1 = flags.design_1.enabled;
-
+    const maintain = flags.maintenance.enabled;
+    console.log(maintain)
 
     const [showSteps, setShowSteps] = useState(false)
-    const [craftTitle,setCraftTitle] = useState("")
-    const [craftsteps,setcraftSteps] = useState([])
+    const [craftTitle, setCraftTitle] = useState("")
+    const [craftsteps, setcraftSteps] = useState([])
     const handleSelect = (title, steps) => {
         setCraftTitle(title)
         setcraftSteps(steps)
@@ -149,38 +149,44 @@ const HomePage = () => {
 
     return (
         <>
-            <Navbar />
-            <hr />
-            {showSteps == false ?
+            {maintain == true ? <Maintainance /> :
                 <>
-                    {desig && <Carousel1 />}
-                    {!desig && <Carousel2 />} 
+                    <>
+                        <Navbar />
+                        <hr />
+                        {showSteps == false ?
+                            <>
+                                {desig && <Carousel1 />}
+                                {!desig && <Carousel2 />}
 
-                    <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 m-10 md:mx-32 md:my-20' >
-                        {cardsData.map((card, index) => (
-                            <div key={index} onClick={() => {handleSelect(card.title, card.steps)}}>
-                            <DiyCards
-                                key={index}
-                                title={card.title}
-                                imageSrc={card.imageSrc}
-                                description={card.description}
-                                isNew={card.isNew}
-                                categories={card.categories}
-                            />
-                            </div>
-                        ))}
-                    </div>
-                </>
-                :
-                <>
-                <div className='min-h-[60vh] flex items-center flex-col'>
-                    
-                <div className='text-3xl w-full text-center m-8 font-bold '>{craftTitle}</div>
-                    <StepsCard recipeData={craftsteps}/>
-                </div>
+                                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 m-10 md:mx-32 md:my-20' >
+                                    {cardsData.map((card, index) => (
+                                        <div key={index} onClick={() => { handleSelect(card.title, card.steps) }}>
+                                            <DiyCards
+                                                key={index}
+                                                title={card.title}
+                                                imageSrc={card.imageSrc}
+                                                description={card.description}
+                                                isNew={card.isNew}
+                                                categories={card.categories}
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </>
+                            :
+                            <>
+                                <div className='min-h-[60vh] flex items-center flex-col'>
+
+                                    <div className='text-3xl w-full text-center m-8 font-bold '>{craftTitle}</div>
+                                    <StepsCard recipeData={craftsteps} />
+                                </div>
+                            </>
+                        }
+                        <Footer />
+                    </>
                 </>
             }
-            <Footer/>
         </>
     )
 }

@@ -42,13 +42,13 @@ const Carousel1 = () => {
 
     return (
         <div className='max-w-full h-[500px] w-full m-auto relative group flex flex-row'>
-            <div class='craft-card bg-black bg-opacity-80 flex justify-center flex-col px-14 text-white shadow-lg w-[25%]'>
-                <h1 class='text-4xl md:text-5xl font-bold mb-4'>Unleash Your </h1>
-                <h1 class='text-4xl md:text-5xl font-bold mb-4 text-red-400'>Creativity!</h1>
-                <div class='my-5'>
-                    <p class='text-lg md:text-xl my-2'>Discover Exciting New Crafts</p>
-                    <p class='text-lg md:text-xl my-2'>Harness the Power of AI</p>
-                    <p class='text-lg md:text-xl my-2'>Get Creative with Crafts</p>
+            <div className='craft-card bg-black bg-opacity-80 flex justify-center flex-col px-14 text-white shadow-lg w-[25%]'>
+                <h1 className='text-4xl md:text-5xl font-bold mb-4'>Unleash Your </h1>
+                <h1 className='text-4xl md:text-5xl font-bold mb-4 text-red-400'>Creativity!</h1>
+                <div className='my-5'>
+                    <p className='text-lg md:text-xl my-2'>Discover Exciting New Crafts</p>
+                    <p className='text-lg md:text-xl my-2'>Harness the Power of AI</p>
+                    <p className='text-lg md:text-xl my-2'>Get Creative with Crafts</p>
                 </div>
             </div>
             <div
