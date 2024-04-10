@@ -60,7 +60,7 @@ https://github.com/Subash-Lamichhane/DIY-IT.git
 ```
 ### Go into the repository
 ```bash
-cd DIY-Crafts
+cd DIY-IT
 ```
 ### Install packages
 
